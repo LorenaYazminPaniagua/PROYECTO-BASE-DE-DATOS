@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.titulo {
+    background-color: #2d7977;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    height: 80px;
+    border-bottom: 1px solid #2d7977;
+    font-weight: bold;
+}
+
+.boton-atras-contenedor {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+}
+
+.boton-atras {
+    width: 50px;
+    height: 50px;
+	transform: rotate(0deg) !important;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-logo {
+    width: 50px;
+    height: 50px;
+}
+
+.menu-title {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+h1 {
+    margin-left: 15px;
+    font-family: 'Arial', sans-serif;
+    font-size: 28px;
+}
+
+.container {
+    background-color: whitesmoke;
+    width: 100%;
+    height: 87vh;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.table {
+    font-family: sans-serif;
+    font-size: 15px;
+    width: 100%;
+    margin: auto;
+    border-collapse: collapse;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.table th,
+.table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.boton-agregar-container {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.agregar {
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.acciones {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.mi-imagen {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+body {
+    background-image: url('Imagenes/Fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.table thead th {
+    background-color: #759796;
+    color: white; /* Para que el texto contraste y se lea bien */
+}
+

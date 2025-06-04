@@ -1,0 +1,154 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.titulo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    height: 80px;
+    border-bottom: 1px solid #2d7977;
+    background-color: #2d7977;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+.boton-atras-contenedor {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.boton-atras {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.boton-atras:hover {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.contenido {
+    margin-top: 90px; /* para que no quede debajo del header fijo */
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(45, 121, 119, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.barcode-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.barcode-form input[type="text"],
+.barcode-form select {
+    flex: 1 1 200px;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+}
+
+.barcode-form button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #1f665e;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.barcode-form button:hover {
+    background-color: #164940;
+}
+
+.barcode-form label {
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 5px;
+    user-select: none;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    color: black;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.headtable {
+    background-color: #2d7977;
+    color: white;
+}
+
+.table th,
+.table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table button {
+    background-color: #2d7977;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    margin: 0 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.table button:hover {
+    background-color: #164940;
+}

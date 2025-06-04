@@ -1,0 +1,107 @@
+/* Reset general */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo del encabezado */
+.titulin {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    height: 80px;
+    border-bottom: 1px solid #2d7977;
+    background-color: #2d7977;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+/* Estilo del cuerpo */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    padding-top: 100px;
+    position: relative; /* Necesario para la posición del botón de regreso */
+}
+
+/* Contenedor de botones */
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    margin-top: 50px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Botones de imagen */
+.image-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.image-button img {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    object-fit: cover;
+}
+
+
+.image-button:hover img {
+    transform: scale(1.05);
+}
+
+/* Estilo del texto debajo de cada botón */
+.image-button p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .button-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .image-button img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Botón de regreso */
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.back-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

@@ -1,0 +1,256 @@
+/* Estilos generales */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eaeaea;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 135px;
+    min-height: calc(100vh - 120px);
+}
+
+/* Encabezado fijo */
+.titulin {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    height: 80px;
+    border-bottom: 1px solid #2d7977;
+    background-color: #2d7977;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #2d7977;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Contenedores */
+.centro {
+    display: contents;
+}
+
+.log {
+    
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; /* centra horizontalmente */
+    align-items: flex-start; /* alinea arriba verticalmente */
+    padding-top: 40px; /* opcional: espacio desde arriba */
+    background-image: url('fondo.jpg'); /* si usas fondo */
+    background-size: cover;
+    background-position: center;
+
+}
+
+.login {
+    width: 35%;
+    background-color: #759796;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* elementos pegados arriba */
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 30px 20px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    gap: 20px;
+}
+
+/* Título */
+.titulo {
+    text-align: center;
+    background-color: #2d7977;
+    color: white;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-bottom: 1px solid #2d7977;
+    z-index: 2;
+    position: relative;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 36px;
+    color: black;
+    font-family: "Times New Roman", serif;
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+.input-group {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input, .input-group select, .input-group textarea {
+    width: 100%;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.input-group label {
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    background-color: whitesmoke;
+    padding: 0 5px;
+    font-size: 12px;
+    color: black;
+    text-transform: uppercase;
+}
+
+/* Botón principal */
+button.Acceder {
+    width: 100%;
+    background-color: #759796;
+    border: 2px solid #434B32;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+button.Acceder:hover {
+    background-color: #215d5b;
+}
+
+/* Opciones */
+.Opciones {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+.Opciones a {
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+}
+
+.Opciones button {
+    width: 100%;
+}
+
+.Opciones button:hover {
+    background-color: #215d5b;
+}
+
+/* Botón de regreso */
+.btn-atras-contenedor {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-left: 20px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+}
+
+.btn-atras-contenedor img {
+    width: 100%;
+    height: auto;
+}
+
+.btn-atras-contenedor:hover {
+    transform: scale(1.2);
+}
+
+
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: -200px;
+    width: 200px;
+    height: 100vh;
+    background-color: #2d7977;
+    padding-top: 20px;
+    border-radius: 0 5px 5px 0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+    transition: left 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.btn-atras-contenedor:hover + .menu-lateral,
+.menu-lateral:hover {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-lateral:hover + .btn-atras-contenedor {
+    visibility: hidden;
+}
+
+.menu-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+    border-bottom: 2px solid #ccc;
+}
+
+.menu-logo {
+    width: 30px;
+    height: 30px;
+}
+
+.menu-titulo {
+    font-size: 20px;
+    color: white;
+    margin: 0;
+}
+
+
+

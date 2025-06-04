@@ -1,0 +1,281 @@
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-image: url('Imagenes/Fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    margin: 0;
+    position: relative;
+}
+
+/* Título centrado */
+.titulo {
+    background-color: #2d7977;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    height: 80px;
+    border-bottom: 1px solid #2d7977;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    margin-left: 15px;
+    font-family: 'Arial', sans-serif;
+    font-size: 28px;
+    text-align: center;
+}
+
+/* Botón de atrás y contenedor */
+.boton-atras-contenedor {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    z-index: 3;
+}
+
+.boton-atras {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.6s ease;
+}
+
+.boton-atras-contenedor:hover .boton-atras {
+    transform: none;
+}
+
+/* MENÚ lateral adaptado a barra superior */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    background-color: #2d7977;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 0 0 5px 5px;
+    z-index: 10;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* Encabezado del menú */
+.menu-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-logo {
+    width: 50px;
+    height: 50px;
+}
+
+.menu-title {
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Lista del menú */
+.menu .list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li {
+    margin: 0;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.menu li a img {
+    width: 20px;
+    height: 20px;
+}
+
+.menu li a:hover {
+    font-size: 18px;
+    transform: scale(1.05);
+}
+
+/* Contenido principal */
+.contenido {
+    position: relative;
+    z-index: 1;
+    padding-top: 120px;
+    transition: filter 0.3s ease;
+}
+
+/* Contenedor principal (tabla y botón) */
+.container {
+    background-color: white;
+    width: 100%;
+    min-height: 87vh;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Tabla */
+.table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 0;
+}
+
+.table {
+    font-family: 'Arial', sans-serif;
+    font-size: 15px;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    border-collapse: collapse;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.table thead th {
+    background-color: #759796;
+    color: white;
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.table tbody td {
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+/* Botón agregar */
+.boton-agregar-container {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.agregar {
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.agregar:hover {
+    transform: scale(1.1);
+}
+
+/* Acciones (Editar/Borrar) */
+.acciones {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.mi-imagen {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.mi-imagen:hover {
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    font-size: 14px;
+    z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .menu .list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .table {
+        font-size: 14px;
+    }
+
+    .agregar {
+        width: 35px;
+        height: 35px;
+    }
+
+    .mi-imagen {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .table {
+        font-size: 12px;
+    }
+
+    .agregar {
+        width: 28px;
+        height: 28px;
+    }
+
+    .mi-imagen {
+        width: 20px;
+        height: 20px;
+    }
+}

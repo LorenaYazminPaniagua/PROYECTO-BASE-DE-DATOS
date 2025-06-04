@@ -1,0 +1,420 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: sans-serif;
+}/* Reset y base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #eaeaea;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Encabezado fijo */
+.titulin {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #2d7977;
+    border-bottom: 1px solid #2d7977;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1000;
+}
+
+/* Main: centrado vertical y horizontal con padding top para dejar espacio a encabezado fijo */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 100px; /* espacio para encabezado fijo */
+    width: 100%;
+    min-height: calc(100vh - 120px); /* deja espacio para footer también */
+}
+
+/* Wrapper para centrar contenido */
+.centro {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Contenedor general de login */
+.log {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Caja del formulario */
+.login {
+    background-color: #759796; /* azul verdoso suave */
+    width: 35%;
+    max-width: 500px;
+    min-height: 500px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Formulario dentro de login */
+form {
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Título */
+.titulo {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.titulo h2, h2 {
+    font-family: "Times New Roman", serif;
+    font-size: 36px;
+    font-weight: normal;
+    color: black;
+    margin: 0;
+}
+
+/* Grupos de inputs */
+.input-group {
+    width: 100%;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+}
+
+.input-group label {
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    background-color: whitesmoke;
+    color: black;
+    font-size: 12px;
+    padding: 0 5px;
+    text-transform: uppercase;
+    pointer-events: none;
+}
+
+/* Botón de acceso */
+button.Acceder {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 2px solid #434B32;
+    background-color: #759796;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+}
+
+button.Acceder:hover {
+    background-color: #215d5b;
+    transform: scale(1.05);
+}
+
+/* Opciones abajo (links o botones) */
+.Opciones {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.Opciones a {
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.Opciones button {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: black;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, font-size 0.3s ease;
+}
+
+.Opciones button:hover {
+    background-color: #215d5b;
+    color: white;
+    font-size: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #2d7977;
+    color: white;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* Botón atrás (si se usa en título) */
+.boton-atras {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-left: 10px;
+}
+
+.boton-atras:hover {
+    transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .login {
+        width: 80%;
+        min-height: auto;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        padding-top: 90px;
+        min-height: auto;
+    }
+
+    .Opciones {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .Opciones button {
+        width: 100%;
+    }
+}
+.titulin {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    height: 80px;
+    border-bottom: 1px solid #2d7977;
+    background-color: #2d7977;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+body {
+    background-image: url('Imagenes/Fondo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 70px; /* Ajusta el espacio superior */
+}
+
+.centro {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.log {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.login {
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 40px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.titulo h2 {
+    font-size: 36px;
+    text-align: center;
+    color: white;
+    margin-right: 10px;
+}
+
+.boton-atras {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.boton-atras:hover {
+    transform: scale(1.2);
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    color: black;
+    background-color: white;
+}
+
+.input-group label {
+    position: absolute;
+    left: 20px;
+    top: 12px;
+    color: gray;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.2s ease all;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 15px;
+    font-size: 12px;
+    color: white;
+    background-color: black;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+.checkbox-group input {
+    margin-right: 10px;
+}
+
+.checkbox-group label {
+    color: white;  /* Asegura que el texto sea blanco */
+    font-size: 14px;  /* Ajusta el tamaño de la fuente */
+    margin-right: 10px;  /* Espacio entre los días */
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 40px;
+    border: none;
+    background-color: #2B0001;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: #450002;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    background-color: transparent;
+    font-size: 14px;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* RESPONSIVE */
+@media (min-width: 600px) {
+    .Opciones {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .Opciones button {
+        width: auto;
+    }
+}
